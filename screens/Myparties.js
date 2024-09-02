@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#430f58",
+    backgroundColor: "#240747",
   },
   secondContainer: {
     margin: 10,

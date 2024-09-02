@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#430f58",
+    backgroundColor: "#240747",
   },
   warningText: {
     color: "#f70776",
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   InputText: {
     fontWeight: "bold",
     width: 70,
-    color: "#59a985",
+    color: "#0092ca",
   },
   inputBox: {
     width: 250,
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   updateBtn: {
-    backgroundColor: "#42b883",
+    backgroundColor: "#0092ca",
     color: "white",
     height: 40,
     width: 250,

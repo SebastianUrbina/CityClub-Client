@@ -12,19 +12,19 @@ const Home = () => {
   useEffect(() => {}, [getAllParties]);
 
   //Refresh Control
-  const onRefresh = useCallback(() => {
+  /*const onRefresh = useCallback(() => {
     setRefreshing(true);
     getAllParties();
     setTimeout(() => {
       setRefreshing(false);
     }, 2000);
-  }, []);
+  }, []);*/
 
   return (
     <View style={styles.container}>
       <ScrollView
-        style={styles.containerTwo}
-        /*refreshControl={
+        /*style={styles.containerTwo}
+        refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }*/
       >
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "space-between",
-    backgroundColor: "#430f58",
+    backgroundColor: "#240747",
   },
   containerTwo: {
     margin: 10,

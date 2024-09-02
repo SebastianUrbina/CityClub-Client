@@ -7,7 +7,6 @@ import Home from "../../screens/Home";
 import { AuthContext } from "../../context/authContext";
 import HeaderMenu from "./HeaderMenu";
 import Post from "../../screens/Post";
-import About from "../../screens/About";
 import Account from "../../screens/Account";
 import Myparties from "../../screens/Myparties";
 
@@ -29,9 +28,9 @@ const ScreenMenu = () => {
             options={{ 
               title: "City Club",
               headerStyle: {
-                backgroundColor: "#430f58",
+                backgroundColor: "#240747",
               },
-              headerTintColor: "#59a985",
+              headerTintColor: "#0092ca",
               headerRight: () => <HeaderMenu />,
              }}
           />
@@ -39,11 +38,11 @@ const ScreenMenu = () => {
             name="Post"
             component={Post}
             options={{ 
-              title: "Post",
+              title: "Add",
               headerStyle: {
-                backgroundColor: "#430f58",
+                backgroundColor: "#240747",
               },
-              headerTintColor: "#59a985",
+              headerTintColor: "#0092ca",
               headerRight: () => <HeaderMenu />,
              }}
           />
@@ -53,9 +52,9 @@ const ScreenMenu = () => {
             options={{ 
               title: "My Parties",
               headerStyle: {
-                backgroundColor: "#430f58",
+                backgroundColor: "#240747",
               },
-              headerTintColor: "#59a985",
+              headerTintColor: "#0092ca",
               headerRight: () => <HeaderMenu />,
              }}
           />
@@ -65,9 +64,9 @@ const ScreenMenu = () => {
             options={{ 
               title: "Account",
               headerStyle: {
-                backgroundColor: "#430f58",
+                backgroundColor: "#240747",
               },
-              headerTintColor: "#59a985",
+              headerTintColor: "#0092ca",
               headerRight: () => <HeaderMenu />,
              }}
           />

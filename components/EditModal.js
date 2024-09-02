@@ -15,6 +15,8 @@ const EditModal = ({ modalVisible, setModalVisible, party }) => {
   const navigation = useNavigation();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [address, setAddress] = useState("");
+  const [date, setDate] = useState("");
   const [loading, setLoading] = useState(false);
 
   //Handle Update Party
@@ -24,6 +26,8 @@ const EditModal = ({ modalVisible, setModalVisible, party }) => {
       const { data } = await axios.put(`/party/update-party/${id}`, {
         name,
         description,
+        address,
+        date,
       });
       setLoading(false);
       navigation.navigate("Myparties");
@@ -39,6 +43,8 @@ const EditModal = ({ modalVisible, setModalVisible, party }) => {
   useEffect(() => {
     setName(party?.name);
     setDescription(party?.description);
+    setAddress(party?.address);
+    setDate(party?.date);
   }, [party]);
   return (
     <View style={styles.centeredView}>
@@ -68,6 +74,16 @@ const EditModal = ({ modalVisible, setModalVisible, party }) => {
               numberOfLines={4}
               value={description}
               onChangeText={(text) => setDescription(text)}
+            />
+            <TextInput
+              style={styles.inputBox}
+              value={address}
+              onChangeText={(text) => setAddress(text)}
+            />
+            <TextInput
+              style={styles.inputBox}
+              value={date}
+              onChangeText={(text) => setDate(text)}
             />
             <View style={styles.btnContainer}>
               <Pressable

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Alert } from "react-native";
+import { StyleSheet, Text, View, Alert, Image } from "react-native";
 import React, { useState } from "react";
 import moment from "moment";
 import axios from "axios";
@@ -81,20 +81,29 @@ const PartyCard = ({ parties, myPartyScreen }) => {
             </View>
           )}
 
-          <Text style={styles.title}>Name: {party?.name}</Text>
+          <Text style={styles.title}>{party?.name}</Text>
           <Text style={styles.desc}>{party?.description}</Text>
+          {party?.image && (
+            <Image
+              source={{
+                uri: `http://192.168.100.57:8080/${party.image}`
+              }}
+              style={styles.imagePlace}
+            />
+          )}
+
           <View style={styles.footer}>
-            {party?.postedBy.name && (
+            
               <Text>
                 {" "}
-                <FontAwesome5 name="user" color={"green"} />{" "}
-                {party?.postedBy?.name}
+                <FontAwesome5 name="location-arrow" color={"red"} />{" "}
+                {party?.address}
               </Text>
-            )}
+            
             <Text>
               {" "}
-              <FontAwesome5 name="clock" color={"black"} />{" "}
-              {moment(party?.createdAt).format("DD:MM:YYYY")}
+              <FontAwesome5 name="calendar" color={"black"} />{" "}
+              {party?.date}
             </Text>
           </View>
         </View>
@@ -107,7 +116,7 @@ export default PartyCard;
 
 const styles = StyleSheet.create({
   heading: {
-    color: "green",
+    color: "#0092ca",
     textAlign: "center",
   },
   card: {
@@ -131,5 +140,12 @@ const styles = StyleSheet.create({
   },
   desc: {
     marginTop: 10,
+  },
+  imagePlace: {
+    width: 330,
+    height: 300,
+    borderRadius: 19,
+    marginTop: 10,
+    marginLeft: 20,
   },
 });

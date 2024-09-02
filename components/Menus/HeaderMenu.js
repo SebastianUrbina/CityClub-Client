@@ -35,6 +35,6 @@ const styles = StyleSheet.create({
     marginBottom: 3,
     alignSelf: "center",
     fontSize: 25,
-    color: "white",
+    color: "#0092ca",
   },
 });

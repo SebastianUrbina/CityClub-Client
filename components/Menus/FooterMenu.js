@@ -12,7 +12,7 @@ const FooterMenu = () => {
       <TouchableOpacity onPress={() => navigation.navigate("Home")}>
         <FontAwesome5
           name="home"
-          color={route.name === "Home" ? ("#ff347f") : ("#59a985")}
+          color={route.name === "Home" ? ("white") : ("#0092ca")}
           style={styles.iconStyle}
         />
         <Text style={styles.txtStyle}>Home</Text>
@@ -21,7 +21,7 @@ const FooterMenu = () => {
         <FontAwesome5
           name="plus-circle"
           style={styles.iconStyle}
-          color={route.name === "Post" ? ("#ff347f") : ("#59a985")}
+          color={route.name === "Post" ? ("white") : ("#0092ca")}
         />
         <Text style={styles.txtStyle}>Party</Text>
       </TouchableOpacity>
@@ -29,7 +29,7 @@ const FooterMenu = () => {
         <FontAwesome5
           name="list"
           style={styles.iconStyle}
-          color={route.name === "About" ? ("#ff347f") : ("#59a985")}
+          color={route.name === "Myparties" ? ("white") : ("#0092ca")}
         />
         <Text style={styles.txtStyle}>My Parties</Text>
       </TouchableOpacity>
@@ -37,7 +37,7 @@ const FooterMenu = () => {
         <FontAwesome5
           name="user"
           style={styles.iconStyle}
-          color={route.name === "Account" ? ("#ff347f") : ("#59a985")}
+          color={route.name === "Account" ? ("white") : ("#0092ca")}
         />
         <Text style={styles.txtStyle}>Account</Text>
       </TouchableOpacity>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginRight: 15,
     marginLeft: 15,
-    backgroundColor: "#430f58",
+    backgroundColor: "#240747",
     height: 65,
   },
   iconStyle: {
@@ -65,6 +65,6 @@ const styles = StyleSheet.create({
   },
   txtStyle: {
     marginTop: 5,
-    color: "#59a985",
+    color: "#0092ca",
   },
 });
